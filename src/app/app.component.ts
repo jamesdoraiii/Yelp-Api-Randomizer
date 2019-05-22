@@ -41,6 +41,10 @@ export class AppComponent {
         var selection = Math.floor(Math.random() * res.businesses.length);
         console.log(res.businesses[selection]);
         this.selectedBusiness = res.businesses[selection]
+
+        if(this.selectedBusiness.is_closed == true){
+          this.submitSearch();
+        }
       }
     )
 
